@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:baselineAligned="false"
+              android:orientation="vertical"
+      >
+
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="#000715"
+
+            >
+
+            <TextView
+                  android:id="@+id/parent_login_id"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_vertical"
+                  android:text="Parent Login"
+                  android:textAlignment="center"
+                  android:textColor="#ffffff"
+                  android:textSize="30dp"
+
+                  />
+      </LinearLayout>
+
+      <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:background="#faffff"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:scaleType="centerCrop"
+                  android:src="@drawable/back"
+                  />
+
+
+            <EditText
+                  android:id="@+id/editText2"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/editText"
+                  android:layout_centerInParent="true"
+                  android:layout_marginBottom="30dp"
+                  android:layout_marginRight="45dp"
+                  android:layout_marginTop="10dp"
+                  android:background="@drawable/box"
+                  android:hint="Password"
+                  android:imeOptions="actionDone"
+                  android:inputType="textPassword"
+                  android:padding="10dp"
+                  android:textAlignment="center"
+                  android:textSize="22sp"
+                  />
+
+            <com.andexert.library.RippleView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/editText2"
+                  android:layout_centerHorizontal="true"
+                  app:rv_centered="false"
+                  app:rv_color="#0182cc"
+                  app:rv_rippleDuration="30"
+                  >
+
+                  <Button
+                        android:id="@+id/start_tracking_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box1"
+                        android:onClick="startTrackingButtonClicked"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:text="Start Tracking"
+                        />
+            </com.andexert.library.RippleView>
+
+            <EditText
+                  android:id="@+id/editText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignEnd="@+id/editText2"
+                  android:layout_alignLeft="@+id/editText2"
+                  android:layout_alignParentTop="true"
+                  android:layout_alignRight="@+id/editText2"
+                  android:layout_alignStart="@+id/editText2"
+                  android:layout_marginTop="110dp"
+                  android:background="@drawable/box"
+                  android:hint="UserName"
+                  android:inputType="text"
+                  android:nextFocusDown="@+id/editText2"
+                  android:padding="10dp"
+                  android:textAlignment="center"
+                  android:textSize="22sp"
+                  />
+
+
+      </RelativeLayout>
+
+</LinearLayout>
